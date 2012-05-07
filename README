@@ -1,0 +1,12 @@
+This code sample will pull all of the vertexes and edges out of an InfiniteGraph federation and convert them to Gephi streaming interface JSON. A RESTlet server is used to send the graph data to the Gephi visualization application for analysis. 
+
+Instructions:
+1. Install the free evaluation of InfiniteGraph
+2. Install maven
+3. Copy your IG federation into src/main/resources
+4. Change GEPHI.graphName in src/resources/graph.properties to your IG graph's name
+5. mvn compile
+6. ooinstallfd target/classes/<federation.boot>
+7. mvn exec:exec (this launches the REST server)
+8. Install Gephi and the streaming api plugin
+9. Use the following URL for the Gephi client stream - http://localhost:8182/getGraph/gephiJSON (note: you can check if it's working in a browser)
